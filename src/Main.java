@@ -2,21 +2,8 @@ import static ui.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Declaración e instanciación
-        Doctor myDoctor = new Doctor();
-
-        // Asignación de valor al atributo name
-        myDoctor.name = "Daniel";
-
-        // Uso de método del objeto
-        myDoctor.showName();
-        myDoctor.showId();
-
-        Doctor.id++;
-
-        Doctor myDoctorAnn = new Doctor();
-        myDoctor.showId();
 
         showMenu();
+
     }
 }
