@@ -9,6 +9,9 @@ public class Main {
         System.out.println(myDoctor.name);
         System.out.println(myDoctor.speciality);
 
+        int i = 0;
+        String name = "Daniel";
+
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
 
         patient.setWeight(54.5);
