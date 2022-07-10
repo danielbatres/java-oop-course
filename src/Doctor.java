@@ -2,31 +2,20 @@ import java.beans.beancontext.BeanContextServiceAvailableEvent;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    // Atributos
-    static int id = 0; // Autoincrementa
-    private String name;
-    private String email;
+public class Doctor extends User {
     private String speciality;
 
-    Doctor() {
-        System.out.println("Construyendo el Objeto Doctor");
-    }
-
-    Doctor(String name, String speciality) {
+    Doctor(String name, String email) {
+        super(name, email);
         System.out.println("El nombre del Doctor asignado es: " + name);
-        id++;
-        this.name = name;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
         this.speciality = speciality;
-    }
-
-    // Comportamientos, métodos
-    public void showName() {
-        System.out.println(name);
-    }
-
-    public void showId() {
-        System.out.println("ID Doctor: " + id);
     }
 
     ArrayList<AvailableAppoiment> availableAppoiments = new ArrayList<>();
