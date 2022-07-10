@@ -18,32 +18,38 @@ public class Doctor extends User {
         this.speciality = speciality;
     }
 
-    ArrayList<AvailableAppoiment> availableAppoiments = new ArrayList<>();
+    ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
     public void addAvailableAppointment(Date date, String time) {
-        availableAppoiments.add(new Doctor.AvailableAppoiment(date, time));
+        availableAppointments.add(new Doctor.AvailableAppointment(date, time));
     }
 
-    public ArrayList<AvailableAppoiment> getAvailableAppoiments() {
-        return availableAppoiments;
+    public ArrayList<AvailableAppointment> getAvailableAppointments() {
+        return availableAppointments;
     }
 
-    public static class AvailableAppoiment {
-        private int id_availableAppoinment;
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: " + speciality + "\nAvailable: "
+                + availableAppointments.toString();
+    }
+
+    public static class AvailableAppointment {
+        private int id_availableAppointment;
         private Date date;
         private String time;
 
-        AvailableAppoiment(Date date, String time) {
+        AvailableAppointment(Date date, String time) {
             this.date = date;
             this.time = time;
         }
 
-        public int getId_availableAppoinment() {
-            return id_availableAppoinment;
+        public int getId_availableAppointment() {
+            return id_availableAppointment;
         }
 
-        public void setId_availableAppoinment(int id_availableAppoinment) {
-            this.id_availableAppoinment = id_availableAppoinment;
+        public void setId_availableAppointment(int id_availableAppointment) {
+            this.id_availableAppointment = id_availableAppointment;
         }
 
         public Date getDate() {
@@ -60,6 +66,11 @@ public class Doctor extends User {
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "Available Appointments \nDate: " + date + "\nTime: " + time;
         }
     }
 }
