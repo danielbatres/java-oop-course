@@ -1,4 +1,6 @@
-import static ui.UIMenu.*;
+import model.Doctor;
+import model.Patient;
+
 import java.util.Date;
 
 public class Main {
@@ -13,7 +15,7 @@ public class Main {
 
         System.out.println(myDoctor);
 
-        /*for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointments()) {
+        /*for (model.Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }*/
 
