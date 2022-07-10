@@ -53,4 +53,10 @@ public class User {
             System.out.println("El número telefónico debe ser de 8 dígitos máximo");
         }
     }
+
+    @Override
+    public String toString() {
+        return "User: " + name + ", Email: " + email +
+                "\nAddress: " + address + ". Phone: " + phoneNumber;
+    }
 }

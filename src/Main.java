@@ -16,5 +16,8 @@ public class Main {
         for (Doctor.AvailableAppoiment aA : myDoctor.getAvailableAppoiments()) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
+
+        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
+        System.out.println(patient);
     }
 }
