@@ -61,7 +61,7 @@ public class UIMenu {
         int response = 0;
         do {
             System.out.println("\n\n");
-            System.out.println("model.Patient");
+            System.out.println("Patient");
             System.out.println("1. Book an appointment");
             System.out.println("2. My appointments");
             System.out.println("0. Return");
@@ -122,7 +122,7 @@ public class UIMenu {
                         // Obtener el usuario logeado
 
                         patientLogged = p;
-                        // ShowPatientMenu
+                        UIMenu.showPatientMenu();
                     }
                 }
             }
